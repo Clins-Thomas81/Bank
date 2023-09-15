@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>New</title>
+
+ <style>
+	/*body background css*/
+body{
+    padding: 0;
+    margin: 0px;
+
+    background-size: cover;
+}
+
+/*login form css*/
+.form{
+    font-family: "Roboto", sans-serif;
+    position: relative;
+    z-index: 1;
+    background: #FFFFFF;
+    opacity: 99%;
+    max-width: 260px;
+    margin: 100px auto 100px;
+    padding: 10px 45px 30px 45px;
+    text-align: center;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+    border-radius: 10px;
+}
+.form p{
+    font-size: 15px;
+    padding: 1px;
+    text-align: center;
+}
+.form input{
+    outline: 0;
+    border-radius: 10px;
+    background: #F2F2F2;
+    width: 100%;
+    border: 0;
+    margin: 0 0 15px;
+    padding: 15px;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+.form input:hover{
+    background-color: #D3F8F9;
+    transition: all 1s ease 0s;
+}
+.form input:focus{
+    background-color: #D3F8F9;
+    transition: all 1s ease 0s;
+}
+.form button{
+    text-transform: uppercase;
+    outline: 0;
+    border-radius: 10px;
+    background: #1ADBE5;
+    width: 100%;
+    border: 0;
+    padding: 15px;
+    color: #FFFFFF;
+    font-size: 14px;
+    cursor: pointer;
+}
+.form button:hover, .form button:active, .form button:focus{
+    background-color: #06C5CF;
+    transition: all 1s ease 0s;
+}
+.form .message{
+    margin: 15px 0 0;
+    color: #B3B3B3;
+    font-size: 12px;
+}
+.form .message a{
+    color: #06C5CF;
+    text-decoration: none;
+}
+</style>
+</head>
+<body style="color:#180A0A;background-color:#F3E8FF;">
+<div class="form">
+    <form action="new" method="post">
+    {% csrf_token %}
+     <h1>Welcome...</h1> <br>
+        <h3>Successfully Logged In</h3>
+        <h4>Create a bank account in 5 minute...</h4><br>
+        <h6>For fill the form click the button below :</h6>
+    <button type="button" class="btn btn-outline-primary"><a href="{% url 'form' %}">Click here</a></button>
+</div>
+</body>
+</html>
